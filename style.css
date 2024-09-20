@@ -1,0 +1,22 @@
+body{
+    background-color: gray;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#map{
+    position: relative;
+    left: 20%;
+    height: 500px;
+    width: 800px;
+    transition-duration: 2s;
+}
+#map:hover{
+    box-shadow: red 1px 1px 10px 1px;
+}
