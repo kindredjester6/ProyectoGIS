@@ -1,25 +1,4 @@
-fetch('geojson.geojson')
-  .then(response => {
-    const reader = response.body.getReader();
-    return new ReadableStream({
-      start(controller) {
-        function push() {
-          reader.read().then(({ done, value }) => {
-            if (done) {
-              controller.close();
-              return;
-            }
-            controller.enqueue(value);
-            push();
-          });
-        }
-        push();
-      }
-    });
-  })
-  .then(stream => new Response(stream))
-  .then(response => response.json())
-  .then(dataJson => layerGeoJson(dataJson));
+
 
 // function getCentroid(coords) {
 //     var area = 0, x = 0, y = 0;
