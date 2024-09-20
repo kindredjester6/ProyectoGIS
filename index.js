@@ -1,4 +1,4 @@
-fetch('http://127.0.0.1:3000/geojson.geojson')
+fetch('geojson.geojson')
   .then(response => {
     const reader = response.body.getReader();
     return new ReadableStream({
